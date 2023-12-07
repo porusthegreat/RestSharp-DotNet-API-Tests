@@ -1,3 +1,4 @@
+using System.Net;
 using PurgoMalumTests.API;
 using PurgoMalumTests.DTO;
 using PurgoMalumTests.utils;
@@ -56,5 +57,20 @@ public class ProfanityFilterSteps
     {
         var response = _purgoMalumApi.GetResponseAsync(contentType, text, add, replacement).Result;
         _scenarioContext.Add("response", response);
+    }
+
+    [When(@"I verify the status code should be '(.*)'")]
+    public void WhenIVerifyTheStatusCodeShouldBe(string statusCode)
+    {
+        var response = _scenarioContext.Get<RestResponse>("response");
+        switch (statusCode)
+        {
+            case "200": Assert.True(response.StatusCode == HttpStatusCode.OK);
+                break;
+            
+            case "400": Assert.True(response.StatusCode == HttpStatusCode.BadRequest);
+                break;
+        }
+
     }
 }

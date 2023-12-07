@@ -3,10 +3,12 @@ Feature: Profanity Filter Tests
 
     Scenario: Should return filtered text
         When I make a 'json' request with text as 'bad@$$'
+        And I verify the status code should be '200'
         Then the response should be 'json' as 'bad***'
 
     Scenario: Should return filtered text with replacement 
         When I make a 'json' request with the text as 'bad@$$' and the replacement as 'ass'
+        And I verify the status code should be '200'
         Then the response should be 'json' as 'bad ass'
 
     Scenario Outline: Should return filtered text with replacement as None
@@ -20,4 +22,5 @@ Feature: Profanity Filter Tests
 
     Scenario: should filter given text with said characters for additional words along with profanity
         When I make a "xml" request with text as "some random bastard" and add "random, words" by replacing chars as "~"
+        And I verify the status code should be '200'
         Then the response should be 'xml' as 'some ~~~~~~ ~~~~~~~'

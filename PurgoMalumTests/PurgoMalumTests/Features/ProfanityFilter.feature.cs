@@ -115,6 +115,9 @@ namespace PurgoMalumTests.Features
         testRunner.When("I make a \'json\' request with text as \'bad@$$\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 6
+        testRunner.And("I verify the status code should be \'200\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 7
         testRunner.Then("the response should be \'json\' as \'bad***\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -129,7 +132,7 @@ namespace PurgoMalumTests.Features
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Should return filtered text with replacement", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 8
+#line 9
     this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -149,10 +152,13 @@ namespace PurgoMalumTests.Features
             else
             {
                 this.ScenarioStart();
-#line 9
+#line 10
         testRunner.When("I make a \'json\' request with the text as \'bad@$$\' and the replacement as \'ass\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 10
+#line 11
+        testRunner.And("I verify the status code should be \'200\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 12
         testRunner.Then("the response should be \'json\' as \'bad ass\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -173,7 +179,7 @@ namespace PurgoMalumTests.Features
             argumentsOfScenario.Add("Error", error);
             argumentsOfScenario.Add("contentType", contentType);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Should return filtered text with replacement as None", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 12
+#line 14
     this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -193,10 +199,10 @@ namespace PurgoMalumTests.Features
             else
             {
                 this.ScenarioStart();
-#line 13
+#line 15
         testRunner.When(string.Format("I make a \'{0}\' request with the text as \'{1}\' and the replacement as \'{2}\'", contentType, input, fillText), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 14
+#line 16
         testRunner.Then(string.Format("the request should respond with \'{0}\' error as \'{1}\'", contentType, error), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -214,7 +220,7 @@ namespace PurgoMalumTests.Features
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("should filter given text with said characters for additional words along with pro" +
                     "fanity", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 21
+#line 23
     this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -234,11 +240,14 @@ namespace PurgoMalumTests.Features
             else
             {
                 this.ScenarioStart();
-#line 22
+#line 24
         testRunner.When("I make a \"xml\" request with text as \"some random bastard\" and add \"random, words\"" +
                         " by replacing chars as \"~\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 23
+#line 25
+        testRunner.And("I verify the status code should be \'200\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 26
         testRunner.Then("the response should be \'xml\' as \'some ~~~~~~ ~~~~~~~\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
