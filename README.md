@@ -21,3 +21,19 @@ The Hometrack Quality Team
 
 
 [2023 Hometrack Tech Challenge - Quality Team (1).docx](https://github.com/zoopla/Hometrack-QE-Task/files/13041217/2023.Hometrack.Tech.Challenge.-.Quality.Team.1.docx)
+
+# Steps to run Tests
+* Clone the repo
+* Change directory `cd Purushotham-Surupu/PurgoMalumTests`
+* Run `dotnet test`
+
+## Tech Stack
+* .Net 8(C#), RestSharp, SpecFlow.Xunit
+
+## Tests
+* Added Tests for /xml and /json API endpoints
+* The scenarios designed could be used to create more functional test cases by parameterizing them without additional code
+
+## Improvements to be made
+* To be able to Run the tests for various environments by setting env variables
+* Add DI for API Clients for increased maintainability and readability of the test suite
