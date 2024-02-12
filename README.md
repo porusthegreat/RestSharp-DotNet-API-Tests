@@ -1,4 +1,4 @@
-# Rest API Test Automation using .Net 8, RestSharp and Cucumber
+# Rest API Test Automation using .Net 8, RestSharp and Specflow
 
 ## Steps to run Tests
 * Clone the repo
