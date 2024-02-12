@@ -2,7 +2,7 @@
 
 ## Steps to run Tests
 * Clone the repo
-* Change directory `cd Purushotham-Surupu/PurgoMalumTests`
+* Change directory `cd RestSharp-DotNet-API-Tests/PurgoMalumTests`
 * Run `dotnet test`
 
 ## Tech Stack
